@@ -1,3 +1,61 @@
+/*Above Header*/
+
 .above-header {
   background-color: #1a1a1a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 4px 0 4px 0;
+}
+
+.above-header p {
+  margin: 0;
+  font-size: 13px;
+}
+
+.download-app {
+  width: 175px;
+  margin-left: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.download-app p {
+  font-size: 13px;
+}
+
+.download-app div {
+  width: 64px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.sub-setup {
+  width: 150px;
+  display: flex;
+  justify-content: space-around;
+  margin-right: 3%;
+}
+
+.dark-clear-mode {
+  display: flex;
+  width: 95px;
+  justify-content: space-between;
+}
+
+/*Menu Tool Bar*/
+
+.main-tool-bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #1c0fb2;
+  color: white;
+  height: 80px;
+}
+
+.logo {
+  font-size: 40px;
 }

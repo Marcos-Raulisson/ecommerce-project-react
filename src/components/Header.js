@@ -1,7 +1,7 @@
 import '../styles/header.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWindows, faGooglePlay, faApple, } from '@fortawesome/free-brands-svg-icons';
-import { faMoon, faCartShopping, faCamera, faAngleDown, faMobileScreen, faDesktop, faRing, faDumbbell } from '@fortawesome/free-solid-svg-icons';
+import { faMoon, faCartShopping, faCamera, faAngleDown, faMobileScreen, faDesktop, faRing, faDumbbell, faMagnifyingGlass, faFilter, faBars } from '@fortawesome/free-solid-svg-icons';
 import { faHeart, faUser } from '@fortawesome/free-regular-svg-icons';
 
 
@@ -31,9 +31,23 @@ function Header (){
             </div>
             <div className='main-tool-bar'>
                 <div className='logo'>
+                    <FontAwesomeIcon icon={faBars}/>
                     <b>Store</b>Way
                 </div>
-                <input></input>
+                <div className='search-bar'>
+                       
+                       <input type='text' id="searchInput" />
+                       <label for="searchInput">
+                            <a href='#'>
+                                <FontAwesomeIcon icon={faFilter} className='search-icon'/>
+                            </a>
+                            <a href='#'>
+                                <FontAwesomeIcon icon={faMagnifyingGlass} className='search-icon'/>
+                            </a>
+                            
+                       </label>
+                </div>
+                
                 <div className='menu-icons'>
                     <FontAwesomeIcon icon={faHeart}/>
                     <FontAwesomeIcon icon={faCartShopping}/>
@@ -42,11 +56,11 @@ function Header (){
                 
             </div>
             <div className='sub-links'>
-            <a href='#'><FontAwesomeIcon icon={faCamera}/>Câmeras e Acessórios<FontAwesomeIcon icon={faAngleDown}/></a>
-            <a href='#'><FontAwesomeIcon icon={faMobileScreen}/>Celulares e Telefones<FontAwesomeIcon icon={faAngleDown}/></a>
-            <a href='#'><FontAwesomeIcon icon={faDesktop}/>Eltrônicos<FontAwesomeIcon icon={faAngleDown}/></a>
-            <a href='#'><FontAwesomeIcon icon={faRing}/>Jóias e Relógios<FontAwesomeIcon icon={faAngleDown}/></a>
-            <a href='#'><FontAwesomeIcon icon={faDumbbell}/>Saúde<FontAwesomeIcon icon={faAngleDown}/></a>
+                <a href='#'><FontAwesomeIcon icon={faCamera}/>Câmeras e Acessórios<FontAwesomeIcon icon={faAngleDown}/></a>
+                <a href='#'><FontAwesomeIcon icon={faMobileScreen}/>Celulares e Telefones<FontAwesomeIcon icon={faAngleDown}/></a>
+                <a href='#'><FontAwesomeIcon icon={faDesktop}/>Eltrônicos<FontAwesomeIcon icon={faAngleDown}/></a>
+                <a href='#'><FontAwesomeIcon icon={faRing}/>Jóias e Relógios<FontAwesomeIcon icon={faAngleDown}/></a>
+                <a href='#'><FontAwesomeIcon icon={faDumbbell}/>Saúde<FontAwesomeIcon icon={faAngleDown}/></a>
             </div>
       </header>
     );

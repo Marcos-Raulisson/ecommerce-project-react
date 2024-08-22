@@ -1,0 +1,29 @@
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Contatos */
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  width: 70%;
+  background-color: #d9d9d9;
+  padding-left: 20px;
+}
+
+.contact h4 {
+  width: 100%;
+  color: #1c0fb2;
+}
+
+.contact-items {
+  display: flex;
+  gap: 40px;
+}

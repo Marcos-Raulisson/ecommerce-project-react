@@ -79,7 +79,8 @@
 }
 
 #searchInput {
-  padding: 8px;
+  font-size: 1em;
+  padding-left: 10px;
   border: none;
   background-color: transparent;
   width: 100%;

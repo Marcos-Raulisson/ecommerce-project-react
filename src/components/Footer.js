@@ -12,22 +12,31 @@ function Footer () {
             
             <h4><b>Atendimento Loja Virtual</b></h4>      
            <div className='contact-items'>
-            <div>
+            <div>   
+                  <span>
                     <FontAwesomeIcon icon={faClock}/>
-                    Segunda a sexta <b>8h às 12h</b> e das <b>14h às 18h</b>
+                  </span>
+                  <p>Segunda a sexta <b>8h às 12h</b> e das <b>14h às 18h</b></p>  
+                    
                 </div>
                 <div>
+                  <span>
                     <FontAwesomeIcon icon={faPhone}/>
-                    <b>+55 11 3331-2024</b>
+                  </span>
+                    <p><b>+55 11 3331-2024</b></p>
+                    
                 </div>
                 <div>
+                  <span>
                     <FontAwesomeIcon icon={faEnvelope}/>
-                    <b>contatosw@storeway.com.br</b>
+                  </span>
+                    <p><b>contatosw@storeway.com.br</b></p>
+                    
                 </div>
            </div>
             
         </div>
-        <div>
+        <div className='ad-container'>
           Propaganda pra loja
         </div>
         <div>

@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <Header/>
-      <h3> Imagem carrousel </h3>
+      <h3> Main </h3>
       <Footer/>
     </div>
   );

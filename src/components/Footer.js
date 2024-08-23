@@ -39,22 +39,23 @@ function Footer () {
         <div className='ad-container'>
           Propaganda pra loja
         </div>
-        <div>
-          <span>
+        <div className='footer-details'>
+          <span className='about-title-container'>
             <h1>StoreWay</h1>
           </span>
-          <span>
-            <h4>Sobre nós?</h4>
+          <div className='white-div'/>
+          <span className='about-us-container'>
+            <h3>Sobre nós?</h3>
             <p>Sua loja virtual de confiança! Oferecemos uma ampla variedade de produtos de alta qualidade, preços competitivos e um atendimento excepcional. Navegue com segurança e descubra ofertas incríveis todos os dias. Bem-vindo à Store Way, onde suas compras são sempre uma excelente experiência.</p>
             <br/>
             <p>CNPJ: 41.902.528/0001-06</p>
           </span>
-          <span>
+          <span className='pay-social-container'>
             
             <div>
-              <h4>
+              <h3>
                 <b>Siga nas redes sociais</b>
-              </h4>
+              </h3>
               <span>
                 <FontAwesomeIcon icon={faFacebook}/>
                 <FontAwesomeIcon icon={faInstagram}/>
@@ -63,7 +64,7 @@ function Footer () {
               </span>
             </div>
             <div>
-              <h4>Pagamentos</h4>
+              <h3>Pagamentos</h3>
               <span>
                 <FontAwesomeIcon icon={faCcVisa}/>
                 <FontAwesomeIcon icon={faCcAmex}/>

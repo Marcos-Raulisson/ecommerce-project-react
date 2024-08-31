@@ -1,4 +1,4 @@
-import '../styles/footer.css'
+import '../components/styles/footer.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faTwitter, faYoutube, faCcVisa, faCcAmex, faCcPaypal, faCcMastercard, faPix } from '@fortawesome/free-brands-svg-icons';
 import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';

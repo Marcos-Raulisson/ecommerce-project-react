@@ -1,8 +1,9 @@
-import '../styles/header.css'
+import '../components/styles/header.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWindows, faGooglePlay, faApple, } from '@fortawesome/free-brands-svg-icons';
 import { faMoon, faCartShopping, faCamera, faAngleDown, faMobileScreen, faDesktop, faRing, faDumbbell, faMagnifyingGlass, faFilter, faBars } from '@fortawesome/free-solid-svg-icons';
 import { faHeart, faUser } from '@fortawesome/free-regular-svg-icons';
+import { Link } from 'react-router-dom';
 
 
 function Header (){
@@ -49,9 +50,17 @@ function Header (){
                 </div>
                 
                 <div className='menu-icons'>
-                    <FontAwesomeIcon icon={faHeart}/>
-                    <FontAwesomeIcon icon={faCartShopping}/>
-                    <FontAwesomeIcon icon={faUser}/>            
+                    <Link to="/favoritos">
+                        <FontAwesomeIcon icon={faHeart}/>
+                    </Link>
+                    <Link to="/favoritos">
+                        <FontAwesomeIcon icon={faCartShopping}/>
+                    </Link>
+                    
+                    <Link to="/login">
+                        <FontAwesomeIcon icon={faUser}/>
+                    </Link>
+                                
                 </div>
                 
             </div>

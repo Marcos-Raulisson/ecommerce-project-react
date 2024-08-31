@@ -114,6 +114,12 @@
   display: flex;
   width: 140px;
   justify-content: space-around;
+  text-decoration: none;
+  color: white;
+}
+
+.menu-icons a {
+  color: green;
 }
 
 /* Sub-Links */

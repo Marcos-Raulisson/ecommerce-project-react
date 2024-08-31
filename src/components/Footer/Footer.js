@@ -1,4 +1,7 @@
-import '../components/styles/footer.css'
+// Estilização do componente
+import './Footer.css'
+
+// Importação de biblioteca de ícones
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faTwitter, faYoutube, faCcVisa, faCcAmex, faCcPaypal, faCcMastercard, faPix } from '@fortawesome/free-brands-svg-icons';
 import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
@@ -8,14 +11,16 @@ import { faClock } from '@fortawesome/free-regular-svg-icons';
 function Footer () {
     return (
         <footer className='footer-container'>
+
+        {/* Início Contato */}
         <div className='contact'>
             
             <h4><b>Atendimento Loja Virtual</b></h4>      
            <div className='contact-items'>
             <div>   
-                  <span>
-                    <FontAwesomeIcon icon={faClock}/>
-                  </span>
+              <span>
+                <FontAwesomeIcon icon={faClock}/>
+              </span>
                   <p>Segunda a sexta <b>8h às 12h</b> e das <b>14h às 18h</b></p>  
                     
                 </div>
@@ -36,10 +41,16 @@ function Footer () {
            </div>
             
         </div>
+        {/* Fim Contato */}
+        
+        {/* Início Anúcio */}
         <div className='ad-container'>
           Propaganda pra loja
         </div>
-        <div className='footer-details'>
+        {/* Fim Anúncio */}
+        
+        {/* Inicio Sobre */}
+        <div className='footer-about'>
           <span className='about-title-container'>
             <h1>StoreWay</h1>
           </span>
@@ -76,6 +87,7 @@ function Footer () {
           </span>
           
         </div>
+        {/* Fim Sobre */}
       </footer>
     );
 }

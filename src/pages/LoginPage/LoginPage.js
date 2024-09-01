@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGoogle,faSquareFacebook, faApple, } from '@fortawesome/free-brands-svg-icons';
+import img1 from '../../assets/images/img1.jpg'
+
 
 const LoginPage = () => {
-  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSubmit = async (e) => {
@@ -9,7 +14,7 @@ const LoginPage = () => {
     const response = await fetch('http://localhost:5000/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ username, password }),
+      body: JSON.stringify({ email, password }),
     });
 
     if (response.ok) {
@@ -22,13 +27,40 @@ const LoginPage = () => {
   };
 
   return (
-    <div>
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
-        <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
-        <button type="submit">Login</button>
-      </form>
+    <div className='login-container'>
+      <section className='img-section'>
+      <img src={img1} alt="Logo" />
+      </section>
+      <section className='login-section'>
+        <div>
+          <p>Não tem uma conta?</p>
+          <Link to="/register">
+            <button>Cadastrar</button>
+          </Link>
+        </div>
+        <h2>Login</h2>
+        <form onSubmit={handleSubmit}>
+          <label for="email">Email</label>
+          <input type="text" name='email' placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required/>
+          <label for="password">Senha</label>
+          <input type="password" name='password' placeholder="********" value={password} onChange={(e) => setPassword(e.target.value)} />
+          <Link to="">Esqueci minha senha</Link>
+          <button type="submit">Entrar</button>
+        </form>
+        <p>OU</p>
+        <div className='buttons-login'>
+          <button>
+            <FontAwesomeIcon icon={faGoogle}/> Google
+          </button>
+          <button>
+            <FontAwesomeIcon icon={faSquareFacebook}/> Facebook
+          </button>
+          <button>
+            <FontAwesomeIcon icon={faApple}/> Apple
+          </button>
+        </div>
+      </section>
+      
     </div>
   );
 };

@@ -1,3 +1,4 @@
+import './RegisterPage.css'
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -31,29 +32,28 @@ const RegisterPage = () => {
   };
 
   return (
-    <div className='login-container'>
+    <div className='register-container'>
       <section className='img-section'>
         <img src={img1} alt="Logo" />
       </section>
       <section className='login-section'>
-        <div>
+        <div className='header-section'>
           <p>Já tem uma conta?</p>
           <Link to="/login">
             <button>Login</button>
           </Link>
         </div>
-        <h2>Cadastrar</h2>
+        <h1>Cadastrar</h1>
         <form onSubmit={createUserAccount}>
         <label for="name">Name</label>
-        <input type="text" name='name' placeholder="Name" value={email} onChange={(e) => setName(e.target.value)} required/>
+        <input type="text" name='name' placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} required/>
           <label for="email">Email</label>
           <input type="text" name='email' placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required/>
           <label for="password">Senha</label>
           <input type="password" name='password' placeholder="********" value={password} onChange={(e) => setPassword(e.target.value)} />
           <label for="confirmPassword">Confirme a senha</label>
           <input type="password" name='confirmPassword' placeholder="********" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
-          <Link to="">Esqueci minha senha</Link>
-          <button type="submit">Entrar</button>
+          <button type="submit">Cadastrar</button>
         </form>
         <p>OU</p>
         <div className='buttons-login'>

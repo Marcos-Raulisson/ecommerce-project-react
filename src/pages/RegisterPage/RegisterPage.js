@@ -36,7 +36,7 @@ const RegisterPage = () => {
       <section className='img-section'>
         <img src={img1} alt="Logo" />
       </section>
-      <section className='login-section'>
+      <section className='register-section'>
         <div className='header-section'>
           <p>Já tem uma conta?</p>
           <Link to="/login">
@@ -45,8 +45,8 @@ const RegisterPage = () => {
         </div>
         <h1>Cadastrar</h1>
         <form onSubmit={createUserAccount}>
-        <label for="name">Name</label>
-        <input type="text" name='name' placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} required/>
+        <label for="name">Nome</label>
+        <input type="text" name='name' placeholder="Nome" value={name} onChange={(e) => setName(e.target.value)} required/>
           <label for="email">Email</label>
           <input type="text" name='email' placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required/>
           <label for="password">Senha</label>
@@ -56,15 +56,15 @@ const RegisterPage = () => {
           <button type="submit">Cadastrar</button>
         </form>
         <p>OU</p>
-        <div className='buttons-login'>
+        <div className='buttons-register'>
           <button>
-            <FontAwesomeIcon icon={faGoogle}/> Google
+            <FontAwesomeIcon icon={faGoogle} className='google-button'/> Google
           </button>
           <button>
-            <FontAwesomeIcon icon={faSquareFacebook}/> Facebook
+            <FontAwesomeIcon icon={faSquareFacebook} className='facebook-button'/> Facebook
           </button>
           <button>
-            <FontAwesomeIcon icon={faApple}/> Apple
+            <FontAwesomeIcon icon={faApple} className='apple-button'/> Apple
           </button>
         </div>
       </section>

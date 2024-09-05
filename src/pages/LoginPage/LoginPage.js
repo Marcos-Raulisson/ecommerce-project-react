@@ -1,8 +1,10 @@
+import './LoginPage.css'
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle,faSquareFacebook, faApple, } from '@fortawesome/free-brands-svg-icons';
 import img1 from '../../assets/images/img1.jpg'
+
 
 
 const LoginPage = () => {
@@ -32,7 +34,7 @@ const LoginPage = () => {
       <img src={img1} alt="Logo" />
       </section>
       <section className='login-section'>
-        <div>
+        <div className='header-section'>
           <p>Não tem uma conta?</p>
           <Link to="/register">
             <button>Cadastrar</button>
@@ -50,13 +52,13 @@ const LoginPage = () => {
         <p>OU</p>
         <div className='buttons-login'>
           <button>
-            <FontAwesomeIcon icon={faGoogle}/> Google
+            <FontAwesomeIcon icon={faGoogle} className='google-button'/> Google
           </button>
           <button>
-            <FontAwesomeIcon icon={faSquareFacebook}/> Facebook
+            <FontAwesomeIcon icon={faSquareFacebook} className='facebook-button'/> Facebook
           </button>
           <button>
-            <FontAwesomeIcon icon={faApple}/> Apple
+            <FontAwesomeIcon icon={faApple} className='apple-button'/> Apple
           </button>
         </div>
       </section>

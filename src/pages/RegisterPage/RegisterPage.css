@@ -114,3 +114,7 @@
   color: white;
   background-color: #1c0fb2;
 }
+
+.message {
+  border: 2px solid red;
+}

@@ -11,9 +11,12 @@ const RegisterPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [message, setMessage] = useState('');
+  const [messageType, setMessageType] = useState('');
+  const [showMessage, setShowMessage] = useState(false);
 
-
-  async function createUserAccount(name, email, password, confirmPassword) {
+  async function createUserAccount(e) {
+    e.preventDefault();
     try {
       const response = await fetch('http://localhost:3000/users/create-account', {
         method: 'POST',
@@ -25,10 +28,28 @@ const RegisterPage = () => {
   
       const data = await response.json();
       console.log('Server response:', data);
+
+      setMessage('Usuário criado com sucesso');
+      setMessageType('success')
+      setShowMessage(true);
+      
+      setTimeout(()=>{
+      setShowMessage(false);
+      }, 5000)
+
       return data;
     } catch (error) {
+      setMessage(`Falha ao criar usuário: ${error}`, error)
+      setMessageType('error')
+      setShowMessage(true);
+      
+      setTimeout(()=>{
+      setShowMessage(false);
+      }, 5000)
       console.error('Error creating user account:', error);
     }
+
+    
   };
 
   return (
@@ -68,7 +89,13 @@ const RegisterPage = () => {
           </button>
         </div>
       </section>
-      
+      {showMessage && (
+          <p className={`message ${messageType}`}>
+            {message}
+          </p>
+        )}
+
+        
     </div>
   );
 };

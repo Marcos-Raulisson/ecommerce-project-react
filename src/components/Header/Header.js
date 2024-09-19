@@ -4,10 +4,15 @@ import { faWindows, faGooglePlay, faApple, } from '@fortawesome/free-brands-svg-
 import { faMoon, faCartShopping, faCamera, faAngleDown, faMobileScreen, faDesktop, faRing, faDumbbell, faMagnifyingGlass, faFilter, faBars } from '@fortawesome/free-solid-svg-icons';
 import { faHeart, faUser } from '@fortawesome/free-regular-svg-icons';
 import { Link } from 'react-router-dom';
+import React, {useState } from 'react';
 
 
 function Header (){
-    return (
+    const [isFavoritesVisible, setIsFavoritesVisible] = useState(false);
+    const [isCartVisible, setIsCartVisible] = useState(false);
+    const [isUserVisible, setIsUserVisible] = useState(false);
+    
+    return (        
         <header className="App-header">
             {/* Início Above Header */}
             <div className='above-header'>
@@ -50,15 +55,62 @@ function Header (){
                     </label>
                 </div>        
                 <div className='menu-icons'>
-                    <Link to="/error-page">
-                        <FontAwesomeIcon icon={faHeart}/>
-                    </Link>
-                    <Link to="/error-page">
-                        <FontAwesomeIcon icon={faCartShopping}/>
-                    </Link>           
-                    <Link to="/login">
-                        <FontAwesomeIcon icon={faUser}/>
-                    </Link>                    
+                    <div className='menu-container'
+                         onMouseEnter={() => setIsFavoritesVisible(true)}
+                         onMouseLeave={() => setIsFavoritesVisible(false)}
+                         >
+                        <Link to="/error-page">
+                            <FontAwesomeIcon icon={faHeart}/>
+                        </Link>
+                        {isFavoritesVisible &&(
+                            <div className='menu'>
+                                <ul>
+                                    <li>Item favorito 1</li>
+                                    <li>Item favorito 2</li>
+                                    <li>Item favorito 3</li>
+                                </ul>
+                            </div>
+                        )}    
+                    
+                    </div>
+                    
+                    <div className='menu-container'
+                         onMouseEnter={() => setIsCartVisible(true)}
+                         onMouseLeave={() => setIsCartVisible(false)}
+                         >
+                        <Link to="/error-page">
+                            <FontAwesomeIcon icon={faCartShopping}/>                            
+                        </Link>
+                        {isCartVisible &&(
+                            <div className='menu'>
+                                <ul>
+                                    <li>Item no carrinho 1</li>
+                                    <li>Item no carrinho 2</li>
+                                    <li>Item no carrinho 3</li>
+                                </ul>
+                            </div>
+                        )}
+                    </div>
+                    <div className='menu-container'
+                         onMouseEnter={()=>setIsUserVisible(true)}
+                         onMouseLeave={()=> setIsUserVisible(false)}
+                         >
+                        <Link to="/login">
+                            <FontAwesomeIcon icon={faUser}/>
+                        </Link>
+                        {isUserVisible &&(
+                            <div className='menu'>
+                                <ul>
+                                    <li><a to="/login">Login</a></li>
+                                    <li><a to="/register">Registro</a></li>
+                                    <li><a to="/error-page">Configurações</a></li>
+                                    <li><a to="/error-page">Sair</a></li>
+                                </ul>
+                            </div>
+                        )}
+
+                    </div> 
+                                        
                 </div>     
             </div>
             {/* Fim Tool-Bar */}

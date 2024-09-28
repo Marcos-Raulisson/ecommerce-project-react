@@ -53,7 +53,7 @@ const RegisterPage = () => {
   };
 
   return (
-    <div className='register-container'>
+    <div className='register-container' id='register'>
       <section className='img-section'>
         <img src={img1} alt="Logo" />
       </section>
@@ -66,13 +66,13 @@ const RegisterPage = () => {
         </div>
         <h1>Cadastrar</h1>
         <form onSubmit={createUserAccount}>
-        <label for="name">Nome</label>
+        <label htmlFor="name">Nome</label>
         <input type="text" name='name' placeholder="Nome" value={name} onChange={(e) => setName(e.target.value)} required/>
-          <label for="email">Email</label>
+          <label htmlFor="email">Email</label>
           <input type="text" name='email' placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required/>
-          <label for="password">Senha</label>
+          <label htmlFor="password">Senha</label>
           <input type="password" name='password' placeholder="********" value={password} onChange={(e) => setPassword(e.target.value)} />
-          <label for="confirmPassword">Confirme a senha</label>
+          <label htmlFor="confirmPassword">Confirme a senha</label>
           <input type="password" name='confirmPassword' placeholder="********" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
           <button type="submit">Cadastrar</button>
         </form>

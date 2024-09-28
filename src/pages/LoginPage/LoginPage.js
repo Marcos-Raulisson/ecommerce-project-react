@@ -55,7 +55,7 @@ async function AuthenticateUser(e) {
 
 
   return (
-    <div className='login-container'>
+    <div className='login-container' data-testid="login-page">
       <section className='img-section'>
       <img src={img1} alt="Logo" />
       </section>
@@ -68,9 +68,9 @@ async function AuthenticateUser(e) {
         </div>
         <h1>Login</h1>
         <form onSubmit={AuthenticateUser}>
-          <label for="email">Email</label>
+          <label htmlFor="email">Email</label>
           <input type="text" name='email' placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required/>
-          <label for="password">Senha</label>
+          <label htmlFor="password">Senha</label>
           <input className='password-input' type="password" name='password' placeholder="********" value={password} onChange={(e) => setPassword(e.target.value)} />
           <Link to="">Esqueci minha senha</Link>
           <button type="submit">Entrar</button>

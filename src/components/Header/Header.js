@@ -45,7 +45,7 @@ function Header (){
                 <div className='search-bar'>              
                     <input type='text' id="searchInput" />                
                     
-                    <label for="searchInput">                      
+                    <label htmlFor="searchInput">                      
                         <a href='#'>                           
                             <FontAwesomeIcon icon={faFilter} className='search-icon'/>                     
                         </a>                      
@@ -59,7 +59,7 @@ function Header (){
                          onMouseEnter={() => setIsFavoritesVisible(true)}
                          onMouseLeave={() => setIsFavoritesVisible(false)}
                          >
-                        <Link to="/error-page">
+                        <Link for="/error-page">
                             <FontAwesomeIcon icon={faHeart}/>
                         </Link>
                         {isFavoritesVisible &&(
@@ -101,10 +101,10 @@ function Header (){
                         {isUserVisible &&(
                             <div className='menu'>
                                 <ul>
-                                    <li><a to="/login">Login</a></li>
-                                    <li><a to="/register">Registro</a></li>
-                                    <li><a to="/error-page">Configurações</a></li>
-                                    <li><a to="/error-page">Sair</a></li>
+                                    <li><Link to="/login">Login</Link></li>
+                                    <li><Link to="/register">Registro</Link></li>
+                                    <li><Link to="/error-page">Configurações</Link></li>
+                                    <li><Link to="/error-page">Sair</Link></li>
                                 </ul>
                             </div>
                         )}
